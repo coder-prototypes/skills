@@ -66,6 +66,36 @@ Each phase has an exit criterion. Confirm before destructive actions
 such as installing system packages, opening ports, overwriting
 kubeconfigs, deleting volumes, or replacing existing Coder state.
 
+### 0. Offer the Admin Skills
+
+Coder has two skill sets:
+
+- Default (`coder/skills`): setup, templates, modules, workspaces.
+- Admin (`https://github.com/coder-prototypes/skills/tree/admin-skills`):
+  the default set plus troubleshoot, upgrade, and access skills for
+  people who run Coder for a team.
+
+If the troubleshoot skill is already available, the admin set is
+installed; skip this phase. Otherwise ask once, before Discover:
+
+> Do you want the admin version of these instructions? It adds help
+> for fixing problems, upgrades, and managing sign-in and users
+> later. Recommended if you will run Coder for a team.
+
+If yes, install it for the current agent and continue setup in the
+same session:
+
+- Claude Code:
+  `claude plugin marketplace add https://github.com/coder-prototypes/skills.git#admin-skills`,
+  then `claude plugin install coder-skills@coder-skills-admin`.
+  Tell the user the new skills load on the next session.
+- Other agents:
+  `npx skills add https://github.com/coder-prototypes/skills/tree/admin-skills --global`.
+
+If no, continue with the default set. Also treat this phase as done
+when the user's first message already chose a set. Exit: the user
+chose a skill set.
+
 ### 1. Discover
 
 Get five answers before probing the host:
@@ -289,6 +319,8 @@ End with one short plain-English block containing:
   supervisor: host PID/log, Docker compose, systemd, or Helm.
 - Whether the starter workspace was created.
 - A one-line offer to wire up Coder Agents.
+- When the admin set is installed, one line saying the agent can
+  also fix problems, upgrade Coder, and set up sign-in later.
 
 Do not include docs URLs, raw upstream `.md` links, alternative command
 placeholders, or a list of CLI commands for the user to try.

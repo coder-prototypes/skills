@@ -4,6 +4,27 @@
 
 Skills for Claude Code, Codex, Cursor, and other coding agents to install, configure, and operate Coder.
 
+## Admin edition
+
+This `admin-skills` branch is the admin edition. It adds three skills for people who run Coder for a team:
+
+| Skill          | Use it to                                                          |
+|----------------|--------------------------------------------------------------------|
+| `troubleshoot` | Find and fix problems on a running deployment.                     |
+| `upgrade`      | Back up and upgrade Coder, then check that everything still works. |
+| `access`       | Set up GitHub or OIDC sign-in, users, groups, and roles.           |
+
+The `setup` skill asks new users if they want this edition before it starts.
+
+```sh
+# Claude Code
+claude plugin marketplace add https://github.com/coder-prototypes/skills.git#admin-skills
+claude plugin install coder-skills@coder-skills-admin
+
+# Other agents
+npx skills add https://github.com/coder-prototypes/skills/tree/admin-skills --global
+```
+
 ## Usage
 
 Install with the [skills CLI](https://skills.sh):
