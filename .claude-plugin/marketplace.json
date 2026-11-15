@@ -5,7 +5,7 @@
     "url": "https://coder.com"
   },
   "metadata": {
-    "description": "Admin edition: setup plus troubleshoot, upgrade, and access skills for running Coder (coder/coder).",
+    "description": "Admin edition: Coder skills for admins, users, and registry contributors, from setup and production to troubleshooting, templates, and Coder Agents (coder/coder).",
     "version": "0.2.0",
     "homepage": "https://github.com/coder-prototypes/skills/tree/admin-skills",
     "repository": "https://github.com/coder/skills"
@@ -13,7 +13,7 @@
   "plugins": [
     {
       "name": "coder-skills",
-      "description": "Admin edition: setup plus troubleshoot, upgrade, and access skills for running Coder (coder/coder).",
+      "description": "Admin edition: Coder skills for admins, users, and registry contributors, from setup and production to troubleshooting, templates, and Coder Agents (coder/coder).",
       "version": "0.2.0",
       "author": {
         "name": "Coder",

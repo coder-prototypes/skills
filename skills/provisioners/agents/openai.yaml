@@ -1,0 +1,7 @@
+interface:
+  display_name: "Coder Provisioners"
+  short_description: "Run external provisioners with keys and tags"
+  icon_small: "../../assets/icon.png"
+  icon_large: "../../assets/logo.png"
+  brand_color: "#000000"
+  default_prompt: "Use $provisioners to run external provisioner daemons for Coder."

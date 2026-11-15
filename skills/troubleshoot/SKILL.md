@@ -3,9 +3,11 @@ name: troubleshoot
 description: >
   Diagnose and fix problems on a running Coder deployment as an
   admin. Use when the user says Coder is down, slow, or broken, a
-  workspace will not build or start, an agent is stuck connecting,
-  SSH or apps do not work, provisioners are offline, logins fail, or
-  the health page shows warnings. Do not use for first-time installs
+  workspace will not build or start, provisioners are offline, logins
+  fail, or the health page shows warnings. This is the general entry
+  point; for agents stuck connecting, SSH, port forwarding, DERP or
+  direct connections, and apps that do not load, use the
+  troubleshoot-connections skill. Do not use for first-time installs
   (use the setup skill), upgrades (use the upgrade skill), or
   template authoring (use the templates skill).
 ---
@@ -63,7 +65,8 @@ Stop at the first layer that fails.
    - Build logs: `coder logs <workspace>` or the build in the UI.
 6. Networking from the client: `coder netcheck`, then
    `coder ping <workspace>`. Direct versus DERP tells you if
-   peer-to-peer is blocked.
+   peer-to-peer is blocked. For a full connection triage, switch to
+   the troubleshoot-connections skill.
 7. Support bundle when the cause is still unclear:
    `coder support bundle <workspace> --yes`. Tell the user where it
    was written; it may contain sensitive data.
@@ -78,6 +81,9 @@ Stop at the first layer that fails.
 | SSH slow or drops | DERP only, UDP blocked | `coder ping` shows relay |
 | Logins fail after OIDC change | Wrong redirect URL or claims | Server logs at login time |
 | Server will not start | Database URL or migration error | First error in server logs |
+
+For the connection rows above, the troubleshoot-connections skill has
+the detailed checks.
 
 ## Fix and verify
 

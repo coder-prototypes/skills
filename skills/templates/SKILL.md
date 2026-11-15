@@ -1,15 +1,18 @@
 ---
 name: templates
 description: >
-  Create, edit, push, or version a Coder template. Use for requests
-  like "scaffold a Docker template", "build a Kubernetes template",
-  "add a coder_parameter for the Git repo URL", "push my template to
-  this Coder deployment", "update the existing aws-linux template to
-  add JetBrains", or "deprecate this template version". Do not use
-  for installing or upgrading Coder itself (use the setup skill),
-  adding a single module to a template that already builds (use the
-  modules skill), or authoring custom Terraform providers unrelated
-  to Coder.
+  Write, create, edit, push, or version a Coder template. Use for
+  writing a new template from a starter or from scratch, and for
+  requests like "scaffold a Docker template", "build a Kubernetes
+  template", "add a coder_parameter for the Git repo URL", "push my
+  template to this Coder deployment", "update the existing aws-linux
+  template to add JetBrains", or "deprecate this template version".
+  Do not use for installing or upgrading Coder itself (use the setup
+  skill), adding a single module to a template that already builds
+  (use the modules skill), staged testing and promotion of a version
+  (use the template-testing skill), contributing to coder/registry
+  (use the registry-templates skill), or authoring custom Terraform
+  providers unrelated to Coder.
 ---
 
 # Templates

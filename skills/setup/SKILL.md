@@ -72,15 +72,20 @@ Coder has two skill sets:
 
 - Default (`coder/skills`): setup, templates, modules, workspaces.
 - Admin (`https://github.com/coder-prototypes/skills/tree/admin-skills`):
-  the default set plus troubleshoot, upgrade, and access skills for
-  people who run Coder for a team.
+  the default set plus skills for people who run Coder for a team
+  (production, upgrade, troubleshoot, troubleshoot-connections,
+  access, observability, provisioners, scale-testing,
+  template-testing, coder-agents-admin), for users (personalize,
+  devcontainers, tasks), and for registry contributors
+  (registry-templates, registry-modules).
 
 If the troubleshoot skill is already available, the admin set is
 installed; skip this phase. Otherwise ask once, before Discover:
 
 > Do you want the admin version of these instructions? It adds help
-> for fixing problems, upgrades, and managing sign-in and users
-> later. Recommended if you will run Coder for a team.
+> for production setup, fixing problems, upgrades, monitoring, and
+> managing sign-in and users later. Recommended if you will run Coder
+> for a team.
 
 If yes, install it for the current agent and continue setup in the
 same session:
