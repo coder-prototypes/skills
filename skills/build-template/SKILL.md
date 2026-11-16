@@ -1,5 +1,5 @@
 ---
-name: mcp-templates
+name: build-template
 description: >
   Create, test, and publish a Coder template using only the Coder MCP
   tools (coder_*), with no CLI or Git checkout. Use when the user asks

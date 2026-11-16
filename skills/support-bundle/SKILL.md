@@ -24,7 +24,7 @@ Call `coder_list_workspaces` (or ask the user) and confirm the target as
 ## 2. Get a toolbox workspace
 
 Call `coder_list_templates` and look for `admin-toolbox`. If it does not
-exist, create it with the steps in the mcp-templates skill and these
+exist, create it with the steps in the build-template skill and these
 files. This version is for Docker; for other infrastructure, keep the
 `coder_agent` block and swap the compute resource.
 
