@@ -38,6 +38,8 @@ npx skills add https://github.com/coder-prototypes/skills/tree/admin-skills --gl
 | `scale-testing`            | Load test Coder with `coder exp scaletest`, clean up, and read results.    |
 | `templates`                | Write, edit, push, and version templates.                                  |
 | `template-testing`         | Push an inactive version, test it in a workspace, then promote it.         |
+| `mcp-templates`            | Create, test, and publish a template with only the Coder MCP tools.        |
+| `support-bundle`           | Collect a support bundle for a workspace from a toolbox workspace.         |
 | `modules`                  | Add or update registry modules in a template.                              |
 | `coder-agents-admin`       | Enable Coder Agents: LLM providers, models, access, skills, and templates. |
 
